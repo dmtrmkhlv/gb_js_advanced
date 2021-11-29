@@ -13,6 +13,7 @@ class GoodsList {
     constructor() {
         this.goods = [];
     }
+    
 
     fetchGoods() {
         this.goods = [{
