@@ -12,6 +12,7 @@ body{
     margin: 0 auto;
 }
 
+
 header{
     width: 100%;
     background-color: #bfd3d0;
@@ -44,6 +45,27 @@ header{
 .cart-button:hover{
     background-color: #7fbdbf;
     border: 2px solid #7fbdbf;
+}
+
+.cart-list{
+    position: fixed;
+    width: 100%;
+    top: 55px;
+    bottom: 0;
+    background-color: #5f9ea0;
+    padding: 50px;
+    box-sizing: border-box;
+    display: none;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.cart-item{
+    width: 100%;
+}
+
+.show{
+    display: flex;
 }
 
 .goods-list{
