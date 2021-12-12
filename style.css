@@ -12,6 +12,7 @@ body{
     margin: 0 auto;
 }
 
+
 header{
     width: 100%;
     background-color: #bfd3d0;
@@ -20,7 +21,7 @@ header{
 .header{
     height: 50px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     width: 100%;
     margin-bottom: 20px;
     padding: 10px 0;
@@ -44,6 +45,37 @@ header{
 .cart-button:hover{
     background-color: #7fbdbf;
     border: 2px solid #7fbdbf;
+}
+
+.cart-list{
+    position: fixed;
+    width: 100%;
+    min-height: 50%;
+    top: 55px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #5f9ea0;
+    padding: 50px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.cart-item{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr repeat(2, 0.5fr) 0.1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin-bottom: 10px
+}
+.cart-item:last-of-type{
+    margin-top: 10px;
+}
+
+.show{
+    display: flex;
 }
 
 .goods-list{
