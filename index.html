@@ -10,30 +10,16 @@
   <div id="app">
     <header>
       <div class="container header">
-        <div class="goods-search-box">
-          <input type="text" class="goods-search" v-model="searchLine">
-          <button class="cart-button" type="button" v-on:click="FilterGoods">Искать</button>
-        </div>
+        <goods-search-box
+          v-on:filter="FilterGoods"
+        ></goods-search-box>
         <button class="cart-button" type="button" v-on:click="showCart">Корзина</button>
-        <div class="container cart-list" v-if="isVisibleCart">
-          <template v-if="this.cartList.length > 0">
-            <div class="cart-item" v-for="cartItem of cartList" v-bind:key="cartItem.id_product">
-              <h3>{{cartItem.product_name}}</h3>
-              <p>{{cartItem.price}} руб.</p>
-              <p>{{cartItem.quantity}} шт.</p>
-              <button v-on:click="removeItem(cartItem)">X</button>
-            </div>
-            <hr>
-            <div class="cart-item">
-              <h3>ИТОГО: </h3>
-              <p>{{sumInfo.amount}} руб.</p>
-              <p>{{sumInfo.countGoods}} шт.</p>
-            </div>
-          </template>
-          <template v-else>
-            <h3>Корзина пуста</h3>
-          </template>
-        </div>
+        <cart-list 
+          v-if="isVisibleCart" 
+          v-bind:list="cartList" 
+          v-bind:sum="sumInfo" 
+          v-on:visible="showCart" v-on:remove="removeItem">
+      </cart-list>
       </div>
     </header>
     <main class="container">
@@ -49,6 +35,11 @@
         </template>
       </div>
     </main>
+    <connect-error
+      v-if="isVisibleError"
+      v-on:error="showError"  
+      v-bind:message="isVisibleErroMessage"
+    ></connect-error>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
   <script src="script.js"></script>
