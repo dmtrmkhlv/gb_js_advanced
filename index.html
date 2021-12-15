@@ -7,18 +7,41 @@
 </head>
 
 <body>
-  
+  <div id="app">
     <header>
       <div class="container header">
-        <button class="cart-button" type="button">Корзина</button>
+        <goods-search-box
+          v-on:filter="FilterGoods"
+        ></goods-search-box>
+        <button class="cart-button" type="button" v-on:click="showCart">Корзина</button>
+        <cart-list 
+          v-if="isVisibleCart" 
+          v-bind:list="cartList" 
+          v-bind:sum="sumInfo" 
+          v-on:visible="showCart" v-on:remove="removeItem">
+      </cart-list>
       </div>
-      
     </header>
     <main class="container">
-
-      <div class="goods-list"></div>
-
+      <div class="goods-list">
+        <template v-if="this.filteredGoods.length > 0">
+          <div v-on:click="addItem(good)" class="goods-item" v-for="good of filteredGoods" v-bind:key="good.id_product">
+            <h3>{{ good.product_name }}</h3>
+            <p>{{ good.price }} руб.</p>
+          </div>
+        </template>
+        <template v-else>
+          <h3>Список пуст</h3>
+        </template>
+      </div>
     </main>
+    <connect-error
+      v-if="isVisibleError"
+      v-on:error="showError"  
+      v-bind:message="isVisibleErroMessage"
+    ></connect-error>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
   <script src="script.js"></script>
 </body>
 
