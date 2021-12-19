@@ -1,0 +1,25 @@
+{
+  "name": "gb_js_advanced",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmtrmkhlv/gb_js_advanced.git"
+  },
+  "keywords": [
+    "geekbrains"
+  ],
+  "author": "Dmitry Mikhailov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dmtrmkhlv/gb_js_advanced/issues"
+  },
+  "homepage": "https://github.com/dmtrmkhlv/gb_js_advanced#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
