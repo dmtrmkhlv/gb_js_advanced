@@ -1,0 +1,57 @@
+.fashion {
+    height: calc(100vw / 1.935);
+    max-height: 620px;
+    background-color: #e8e8e8;
+
+    &__wrapper {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 1;
+    }
+
+    &__left {
+        flex-grow: 1;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        position: relative;
+
+        &__wrapper {
+            margin-left: 24px;
+        }
+
+        &__line {
+            width: 12px;
+            height: 100%;
+            background-color: $main_color;
+
+            position: absolute;
+            top: 62%;
+            transform: translateY(-61.5%);
+        }
+    }
+
+    &__right {
+        flex-grow: 1;
+        width: 50%;
+        height: 100%;
+        background-image: url(../img/fashion_image.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: bottom;
+
+    }
+
+    &__text {
+        font-size: 40px;
+        font-weight: 800;
+    }
+}
+
+.h1 {
+    font-size: 60px;
+    font-weight: 800;
+}

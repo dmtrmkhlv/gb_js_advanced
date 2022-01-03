@@ -1,0 +1,131 @@
+.banner {
+    margin-top: 120px;
+    margin-bottom: 100px;
+    height: 530px;
+    background-color: #222224;
+
+    &__wrapper {
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        display: flex;
+        color: #fff;
+    }
+
+    &__info {
+        width: 35%;
+    }
+
+    &__poster {
+        width: 65%;
+        position: relative;
+
+        &__title {
+            position: absolute;
+            top: 125px;
+            left: 40px;
+            font-size: 50px;
+            font-weight: 800;
+        }
+
+        &__text {
+            position: absolute;
+            top: 180px;
+            left: 40px;
+            font-size: 29px;
+            font-weight: 800;
+        }
+    }
+
+    &_img {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__items {
+        padding-top: 45px;
+        padding-left: 40px;
+        padding-right: 45px;
+
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+
+        &__info {
+            width: 65%;
+            margin-left: 50px;
+            margin-bottom: 50px;
+
+            &__title {
+                font-size: 20px;
+                margin-bottom: 15px;
+            }
+
+            &__info__about {
+                font-size: 12px;
+                line-height: 1.8;
+                font-weight: 300;
+            }
+        }
+    }
+
+    &__icon {
+        width: 56px;
+        height: fit-content;
+    }
+
+    /* CATALOG PAGE*/
+
+    &.catalog__page {
+        margin-bottom: 0;
+        height: 350px;
+
+        .banner {
+            &__wrapper {
+                display: flex;
+                width: unset;
+            }
+
+            &__info {
+                width: 100%;
+            }
+
+            &__items {
+                padding-top: 0;
+                padding-left: 40px;
+                padding-right: 45px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                height: 100%;
+            }
+
+            &__icon {
+                margin-bottom: 40px;
+            }
+
+            &__item {
+                flex-direction: column;
+                align-items: center;
+                width: 32%;
+
+                &__info {
+                    width: 100%;
+                    margin-left: 0;
+                    margin-bottom: 0;
+
+                    p {
+                        text-align: center;
+                    }
+
+                    &__about {
+                        line-height: 1.5;
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+.breadcrumbs {
+    height: 150px;
+    background-color: #f8f3f4;
+    border-bottom: 1px solid #e8e8e8;
+
+    &__box {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__title {
+        color: $main_color;
+        text-transform: uppercase;
+        text-align: left;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: #000;
+        font-weight: 300;
+
+        &:last-of-type {
+            color: $main_color;
+            font-weight: 600;
+        }
+    }
+
+}

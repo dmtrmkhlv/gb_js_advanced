@@ -1,12 +1,11 @@
 <template>
-    <div class="container header">
-        <div class="seacrh">
-            <input v-if="seacrhShow == 1" type="text" v-model="searchStr">
-        </div>
-        <div class="menu">
-            <router-link to="/">Главная</router-link>
-            <router-link to="/cart">Корзина ({{cartCount}})</router-link>
-        </div>
+    <div class="header__search__form">
+        <input v-if="seacrhShow == 1" 
+        v-model="searchStr"
+        type="text" 
+        class="header__search__input" 
+        placeholder="Search for Item...">
+        <!-- <button v-on:click="onClick" type="submit" class="button button__search"></button> -->
     </div>
 </template>
 
@@ -19,7 +18,6 @@
                 this.$store.getters.getCart.map(good => good.quantity).forEach((item) => {
                     countGoodsSum = countGoodsSum + item;
                 });
-                // console.log(countGoodsSum)
                 return countGoodsSum;
             },
             searchStr: {
@@ -32,8 +30,9 @@
             }
         },
         methods: {
-            onSearch() {
-
+            onClick() {
+                console.log("searh")
+                // this.$emit('action', this.data)
             }
         }
     }

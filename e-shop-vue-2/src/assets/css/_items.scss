@@ -1,0 +1,107 @@
+.items {
+    &__wrapper {
+        margin-top: 60px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 55px;
+    }
+
+    &__card {
+        width: 270px;
+        padding-bottom: 10px;
+        margin-bottom: 40px;
+        text-decoration: none;
+        color: #000;
+        position: relative;
+        background-color: #fff;
+        transition: all .5s ease;
+
+        &:hover {
+            box-shadow: -1px 8px 10px -2px #00000033;
+            transform: scale(1.5);
+            z-index: 2;
+
+            & .items__card__add {
+                display: flex;
+            }
+
+            & .items__card__img {
+                filter: brightness(0.5);
+                transition: all .5s ease;
+            }
+        }
+
+        & .pink__letter {
+            font-size: 12px;
+            margin-left: 15px;
+        }
+
+        &__link {
+            text-decoration: none;
+            color: #000;
+            display: block;
+        }
+
+        &__img {
+            width: 270px;
+            height: 280px;
+            background-color: #e9e9e9;
+
+            &.form__product__img {
+                width: 100px;
+                height: fit-content;
+            }
+        }
+
+        &__add {
+            height: 40px;
+            border: 2px solid #fff;
+            display: none;
+            align-items: center;
+            justify-content: space-around;
+            width: 42%;
+            margin-bottom: 12px;
+
+            &:first-of-type {
+                width: 100%;
+            }
+
+            &__box {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                text-decoration: none;
+                width: 120px;
+                position: absolute;
+                top: 100px;
+                left: 70px;
+                right: 70px;
+                z-index: 2;
+            }
+
+            &:hover {
+                box-shadow: 0px 0px 10px 5px #ffffff;
+            }
+
+            & .cart__logo {
+                width: 25px;
+                height: 25px;
+            }
+        }
+
+        &__info {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+    }
+
+    & .button {
+        margin: 0 auto;
+        display: block;
+        width: 150px;
+    }
+}

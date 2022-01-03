@@ -1,10 +1,10 @@
 <template>
-    <div class="goods-list">
+    <div class="container items__wrapper">
         <Card v-for="good of goodList" 
         v-bind:key="good.id" 
         v-bind:data="good" 
         v-bind:quantity = "1"
-        v-bind:action="'Купить'" 
+        v-bind:action="'Add To Cart'" 
         v-on:action="onAddToCart" />
     </div>
 </template>

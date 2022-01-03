@@ -1,0 +1,130 @@
+.product {
+    &__cart {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #e8e8e8;
+
+        &__img {
+            height: 85px;
+        }
+
+        &__info {
+            margin-left: 15px;
+        }
+
+        &__title {
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        &__rate {
+            text-align: left;
+            display: flex;
+            unicode-bidi: bidi-override;
+            direction: rtl;
+            margin-right: 15px;
+            justify-content: end;
+
+            .fill_rate {
+                text-decoration: none;
+                color: #e4af48;
+            }
+
+        }
+
+        &__sum {
+            display: flex;
+            align-items: center;
+            margin-top: 12px;
+        }
+
+        &__X {
+            margin-left: 5px;
+        }
+
+        &__price {
+            margin-left: 0;
+        }
+
+        &__item {
+            display: flex;
+            text-decoration: none;
+            color: #000;
+        }
+
+        &__total {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            margin: 20px auto 36px;
+            font-weight: 800;
+        }
+    }
+
+    &__delete {
+        width: 50px;
+        height: 85px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        &__icon {
+            width: 15px;
+            height: 15px;
+            background-color: #c0c0c0;
+            border-radius: 50%;
+            position: relative;
+
+            &::after {
+                content: "";
+                transform: rotate(-45deg);
+                height: 70%;
+                width: 2px;
+                background-color: #fff;
+                top: 2px;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                position: absolute;
+            }
+
+            &::before {
+                content: "";
+                transform: rotate(45deg);
+                height: 70%;
+                width: 2px;
+                background-color: #fff;
+                top: 2px;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                position: absolute;
+            }
+        }
+
+        &:hover {
+            .product__delete__icon {
+                background-color: $main_color;
+            }
+        }
+    }
+}
+
+.product__cart__rate>span:hover:before,
+.product__cart__rate>span.fill_rate.active:before {
+    content: "\2605";
+    position: absolute;
+}
+
+.product__cart__rate>span:hover:before,
+.product__cart__rate>span:hover~span:before {
+    content: "\2605";
+    position: absolute;
+}

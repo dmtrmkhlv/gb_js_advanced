@@ -1,8 +1,5 @@
 <template>
-  <div id="app">
     <router-view />
-  </div>
-
 </template>
 
 <script>
@@ -11,166 +8,12 @@ export default ({
   mounted() {
     this.$store.dispatch('fetchShowCase')
     this.$store.dispatch('fetchCart')
-  },
+  }
 })
 </script>
 
 
 <style lang="scss">
-*{
-    margin: 0;
-    padding: 0;
-}
-
-body{
-    font-family: sans-serif;
-}
-
-.container{
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-header{
-    width: 100%;
-    background-color: #bfd3d0;
-}
-
-.header{
-    height: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 20px;
-    padding: 10px 0;
-    box-sizing: border-box;
-}
-
-button{
-    cursor: pointer;
-}
-
-.cart-button{
-    padding: 10px 5px;
-    font-size: 15px;
-    line-height: 5px;
-    background-color: #5f9ea0;
-    color: #fff;
-    border: 2px solid #5f9ea0;
-    font-family: sans-serif;
-    border-radius: 4px;
-    text-transform: uppercase;
-    font-weight: 800;
-
-    &:hover{
-      background-color: #7fbdbf;
-      border: 2px solid #7fbdbf;
-  }
-  
-}
-
-.cart-list{
-    position: fixed;
-    width: 100%;
-    min-height: 50%;
-    top: 55px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #5f9ea0;
-    padding: 50px;
-    box-sizing: border-box;
-    flex-wrap: wrap;
-    align-content: flex-start;
-}
-
-.cart-item{
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr repeat(2, 0.5fr) 0.1fr;
-    grid-template-rows: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    margin-bottom: 10px;
-
-    &:last-of-type{
-      margin-top: 10px;
-    }
-}
-
-.show{
-    display: flex;
-}
-
-.goods-list{
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.goods-item{
-    display: flex;
-    align-items: flex-end;
-    flex-wrap: wrap;
-    width: 24%;
-    min-height: 200px;
-    background-color: #5f9ea0;
-    margin-bottom: 20px;
-    padding: 10px;
-    box-sizing: border-box;
-    cursor: pointer;
-    border-radius: 4px;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 800;
-    h3{
-      width: 100%;
-      text-align: center;
-    }
-    p{
-      width: 100%;
-      text-align: left;
-    }
-
-    &:hover{
-      background-color: #7fbdbf;
-    }
-
-    button {
-      cursor: pointer;
-      width: 100%;
-      height: 50px;
-    }
-}
-
-.connect-error {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 200px;
-    height: 100px;
-    border: 4px solid #5f9ea0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    background-color: #fff;
-    filter: drop-shadow(-1px 4px 8px black);
-
-    p{
-      text-align: center;
-    }
-
-    button{
-      position: absolute;
-      right: -30px;
-      top: -30px;
-      width: 30px;
-      height: 30px;
-    }
-}
-
+  @import "https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap";
+  @import "./assets/css/style.css";
 </style>

@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ffffff;
+    font-family: 'Lato', sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.wrapper__top {
+    flex: 1;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.flex-c-c {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pink__letter {
+    color: $main_color;
+    font-weight: 800;
+}
+
+.red__letter {
+    color: red;
+}
+
+.black__link {
+    color: #000;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 18px;
+
+    &:hover {
+        color: $main_color;
+    }
+}
+
+.add_text {
+    color: #fff;
+    font-size: 14px;
+}
+
+a {
+    transition: all .3s ease;
+    text-decoration: none;
+
+    &:hover {
+        color: $main_color;
+
+        &.banner__wrapper {
+            color: #fff;
+        }
+
+        .offer__card__text,
+        h4 {
+            color: #000;
+        }
+    }
+
+
+}
+
+button,
+summary {
+    transition: all .3s ease;
+}
+
+.h2,
+.items__p {
+    text-align: center;
+}
+
+h3 {
+    font-weight: 800;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+h4,
+.h4 {
+    margin: 18px 15px;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+h5 {
+    font-size: 18px;
+}
+
+h6 {
+    font-size: 0;
+}
+
+.text__bold {
+    font-weight: 800;
+    color: #000;
+}
+
+.stick {
+    margin: 0 12px;
+}
+
+details {
+    -moz-appearance: initial;
+}
+
